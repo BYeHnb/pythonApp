@@ -1,11 +1,42 @@
-# 写一个猜大小的小应用
-# 1. 随机生成一个1-100之间的数字
+// 指定cpu使用率，与内存占用率
+# -*- coding: utf-8 -*-
+import psutil
+import time
+import os
+import sys
+import json
+import requests
+import datetime
+import logging
+import logging.handlers
+import configparser
+import threading
+import socket
+import re
+import subprocess
+import platform
+import random
+import string
+import base64
+import hashlib
+import urllib
+import urllib.request
+import urllib.parse
+import urllib.error
+import urllib.request
+import urllib.error
+import urllib.parse
+import http.cookiejar
+import gzip
+import io
+import ssl
 
-# 2. 让用户输入一个数字
-# 3. 判断用户输入的数字是否正确
-# 4. 如果正确，提示用户猜对了
-# 5. 如果不正确，提示用户猜错了，并且提示用户猜大了还是猜小了
-# 6. 重复2-5步骤，直到用户猜对为止
-# 7. 提示用户一共猜了多少次
-# 8. 提示用户是否继续游戏，如果继续游戏，重复1-7步骤，如果不继续游戏，退出程序
+# 读取配置文件
+def read_config():
+    config = configparser.ConfigParser()
+    config.read('config.ini')
+    return config
+
+if __name__ == '__main__':
+    # 读取配置文件
 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>乱码文字生成器</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    使用多行文本框，可以方便的复制结果。不可编辑 5行
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="comment">多行文本框:</label>
+                    <textarea class="form-control" rows="5" id="comment" readonly="readonly"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var str = "乱码文字生成器";
+        var result = "";
+        for (var i = 0; i < str.length; i++) {
+            result += str[i] + " ";
+        }
+        document.getElementById("comment").value = result;
+    </script>
+    
+
+    
+
+
+
+
+<div>
+
+</div>
+</body>
+</html>
