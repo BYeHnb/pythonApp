@@ -1,42 +1,16 @@
-// 指定cpu使用率，与内存占用率
-# -*- coding: utf-8 -*-
-import psutil
-import time
-import os
-import sys
-import json
-import requests
+# 写一个方法，验证两个时间戳间隔的天数
+# 2018-1-1 2018-1-3 间隔2天
+# 2018-1-1 2018-1-1 间隔0天
+# 2018-1-1 2018-1-2 间隔1天
+
 import datetime
-import logging
-import logging.handlers
-import configparser
-import threading
-import socket
-import re
-import subprocess
-import platform
-import random
-import string
-import base64
-import hashlib
-import urllib
-import urllib.request
-import urllib.parse
-import urllib.error
-import urllib.request
-import urllib.error
-import urllib.parse
-import http.cookiejar
-import gzip
-import io
-import ssl
 
-# 读取配置文件
-def read_config():
-    config = configparser.ConfigParser()
-    config.read('config.ini')
-    return config
+def get_days(start, end):
+    start = datetime.datetime.strptime(start, '%Y-%m-%d')
+    end = datetime.datetime.strptime(end, '%Y-%m-%d')
+    return (end - start).days
 
-if __name__ == '__main__':
-    # 读取配置文件
+print(get_days('2018-1-1', '2018-1-3'))
+print(get_days('2018-1-1', '2018-1-1'))
+print(get_days('2018-1-1', '2018-1-2'))
 
