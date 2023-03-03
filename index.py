@@ -10,7 +10,8 @@ def get_days(start, end):
     end = datetime.datetime.strptime(end, '%Y-%m-%d')
     return (end - start).days
 
-print(get_days('2018-1-1', '2018-1-3'))
-print(get_days('2018-1-1', '2018-1-1'))
-print(get_days('2018-1-1', '2018-1-2'))
+if __name__ == '__main__':
+    print(get_days('2018-1-1', '2018-1-3'))
+    print(get_days('2018-1-1', '2018-1-1'))
+    print(get_days('2018-1-1', '2018-1-2'))
 
